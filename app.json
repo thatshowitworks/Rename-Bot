@@ -22,7 +22,7 @@
     },
     "CHAT_BASE_TOKEN": {
       "description": "Your chat base token, as a string.",
-      "value": ""
+      "value": "",
       "required": false
     },
     "APP_ID": {
@@ -35,7 +35,7 @@
     },
     "AUTH_USERS": {
       "description": "allow only pre-defined users to use this bot",
-      "value": "7351948 466337795"
+      "value": "1391163165 919262859"
     },
     "BANNED_USERS": {
       "description": "Banned Unwanted members..",
