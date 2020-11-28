@@ -49,10 +49,11 @@ async def rename_doc(bot, update):
             text=Translation.DOWNLOAD_START,
             reply_to_message_id=update.message_id
         )
+        new_file_name = download_location + file_name
         c_time = time.time()
         the_real_download_location = await bot.download_media(
             message=update.reply_to_message,
-            file_name=download_location,
+            file_name=new_file_name,
             progress=progress_for_pyrogram,
             progress_args=(
                 Translation.DOWNLOAD_START,
@@ -70,7 +71,7 @@ async def rename_doc(bot, update):
             except:
                 pass
             new_file_name = download_location + file_name
-            os.rename(the_real_download_location, new_file_name)
+            #os.rename(the_real_download_location, new_file_name)
             await bot.edit_message_text(
                 text=Translation.UPLOAD_START,
                 chat_id=update.chat.id,
